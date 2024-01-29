@@ -1,0 +1,38 @@
+version: '1'
+
+services:
+  pgdatabase:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=db-user
+      - POSTGRES_PASSWORD=db-password
+      - POSTGRES_DB=db-name
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    ports:
+        - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d db-name -U db-user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=root
+    ports:
+      - "8888:80"
+    depends_on:
+      pgdatabase:
+        condition: service_healthy
+
+  ingestion_script:
+    build: .
+    volumes:
+      - ./ny_taxi:/app/ny_taxi
+    depends_on:
+      pgdatabase:
+        condition: service_healthy
