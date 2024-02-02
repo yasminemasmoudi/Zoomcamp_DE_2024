@@ -1,9 +1,3 @@
-variable "credentials" {
-  description = "My Credentials"
-  default     = "/workspaces/Zoomcamp_DE_2024/de-zoomcamp-413000-590954a8cf8d.json"
-}
-
-
 variable "project" {
   description = "Project"
   default     = "de-zoomcamp-413000"
