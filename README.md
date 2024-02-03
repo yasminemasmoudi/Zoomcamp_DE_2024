@@ -12,25 +12,24 @@ Second part - I used virtual machine on Linux from GCP and installed Terraform o
 
 The content is structured as follows:
 
-1. **...**
 
-2. **Ingesting NY Taxi Data to Postgres:**
+1. **Ingesting NY Taxi Data to Postgres:**
    - Running Postgres locally using Docker.
    - Exploration of the NY Taxi dataset.
    - Ingesting data into the Postgres database.
 
-3. **Connecting pgAdmin and Postgres:**
+2. **Connecting pgAdmin and Postgres:**
    - Introduction to the pgAdmin tool.
    - Docker networks setup.
    - Steps for registering and creating a server in pgAdmin.
 
-4. **Putting the Ingestion Script into Docker:**
+3. **Putting the Ingestion Script into Docker:**
 
-5. **Running Postgres and pgAdmin with Docker-Compose:**
+4. **Running Postgres and pgAdmin with Docker-Compose:**
    - Configuration of a Docker-compose YAML file.
    - Running multiple containers simultaneously using `docker-compose up`.
 
-6. **Setting up Google Cloud and Terraform:**
+5. **Setting up Google Cloud and Terraform:**
 
 **What is Terraform?**
 
