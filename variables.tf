@@ -8,6 +8,7 @@ variable "region" {
   default     = "us-central1"
 }
 
+
 variable "location" {
   description = "Project Location"
   default     = "US"
