@@ -34,7 +34,7 @@ Now we can start building our pipeline!
 The first pipeline is an ETL pipeline using blocks to load the yellow taxi data from this GitHub repo, transform the data, and export the data into a Postgres database within our docker container. The resulting DAG should look something like the screenshot below.
 
 <div>
-<img src="https://github.com/yasminemasmoudi/Zoomcamp_DE_2024/week2/API_to_postgres.png">
+<img src="https://github.com/yasminemasmoudi/Zoomcamp_DE_2024/blob/master/week%202/ETL%20API_to_postgres.png">
 </div>
 
 ### Configuring PostgreSQL connection
@@ -189,7 +189,7 @@ Update Mage Configuration (Environmental Variables)
 
 ### ETL: API to GCS
 <div>
-<img src="https://github.com/yasminemasmoudi/Zoomcamp_DE_2024/week2/API_to_GCS.png">
+<img src="https://github.com/yasminemasmoudi/Zoomcamp_DE_2024/blob/master/week%202/API_to_GCS.png">
 </div>
 
 ### ETL: GCS to BigQuery
