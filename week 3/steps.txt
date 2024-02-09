@@ -1,0 +1,11 @@
+Uploading data to Google Cloud Storage using data orchestrator Mage
+
+1- Download the data from source (see load_api_data_green.py Data Loader script)
+2- Export data from Mage to Google Cloud Storage (see taxi-_to_gcs_parquet.py script)
+3- Check if you data was successfully downloaded to Google Cloud Storage bucket
+
+4- Move a Parquet file from Google Cloud Storage (GCS) to BigQuery 
+Here I used gcloud command-line tool:
+bq load --source_format=PARQUET de-zoomcamp-413000:green2022.green2022table gs://mage_yasmine_masmoudi_de_2024/green_taxi_2022.parquet
+5- To confirm if your table has been successfully created, you can easily view the data in BigQuery.
+6- Once your data is successfully uploaded to BigQuery, you'll be able to to perform queries on the data.
