@@ -1,0 +1,9 @@
+version: 2
+sources:
+    - name: staging
+      database: de-zoomcamp-413000
+      schema: all_data
+
+      tables:
+        - name: green_taxi_2020_table
+        - name: yellow_taxi_2020_table
