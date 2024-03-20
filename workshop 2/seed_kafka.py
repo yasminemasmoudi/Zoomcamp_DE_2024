@@ -110,7 +110,7 @@ def send_csv_records(env, csv_file):
     records = pandas.read_csv(csv_file)
     # connect to risingwave via psycopg2
     conn = psycopg2.connect(
-        host="localhost",
+        host="127.0.0.1",
         database="dev",
         user="root",
         port=4566,
@@ -173,6 +173,5 @@ def main():
     else:
         logging.info('Sending historical data')
     send_parquet_records(env, trip_data_filepath, real_time=update)
-
 
 main()
